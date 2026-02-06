@@ -60,7 +60,7 @@ const CreditTypes = () => {
             <div
               key={index}
               className={cn(
-                "group p-8 rounded-2xl bg-background/5 backdrop-blur-sm border border-primary-foreground/10 hover:border-brand-light/30 hover:bg-background/10 transition-all duration-300 opacity-0 translate-y-10",
+                "group p-4 sm:p-8 rounded-2xl bg-background/5 backdrop-blur-sm border border-primary-foreground/10 hover:border-brand-light/30 hover:bg-background/10 transition-all duration-300 opacity-0 translate-y-10",
                 isInView && `reveal-up stagger-delay-${index}`
               )}
             >

@@ -37,7 +37,7 @@ const ForInvestors = () => {
     <section id="investidores" className="py-24 bg-background" ref={ref}>
       <div className="container mx-auto px-4">
         <div className="max-w-6xl mx-auto">
-          <div className="grid lg:grid-cols-2 gap-16 items-center">
+          <div className="grid lg:grid-cols-2 gap-8 lg:gap-16 items-center">
             <div className={cn(
               "opacity-0 translate-y-10",
               isInView && "reveal-up"
@@ -53,7 +53,7 @@ const ForInvestors = () => {
                 a Paypers estrutura operações em cotas com:
               </p>
 
-              <div className="grid grid-cols-2 gap-4 mb-8">
+              <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 mb-8">
                 {benefits.map((benefit, index) => (
                   <div
                     key={index}
@@ -73,9 +73,9 @@ const ForInvestors = () => {
                 ))}
               </div>
 
-              <Button variant="hero" size="lg" className="group">
+              <Button variant="hero" size="lg" className="group w-full sm:w-auto text-xs sm:text-base md:text-lg px-3 sm:px-6 md:px-8 py-3 sm:py-4 gap-2 leading-tight">
                 Quero conhecer as oportunidades de investimento
-                <ArrowRight className="w-5 h-5 group-hover:translate-x-1 transition-transform" />
+                <ArrowRight className="w-3.5 h-3.5 sm:w-5 sm:h-5 group-hover:translate-x-1 transition-transform flex-shrink-0" />
               </Button>
             </div>
 
@@ -84,7 +84,7 @@ const ForInvestors = () => {
               isInView && "reveal-scale"
             )}>
               <div className="absolute inset-0 gradient-primary rounded-3xl opacity-10 blur-3xl" />
-              <div className="relative p-8 rounded-3xl gradient-card border border-border shadow-elevated">
+              <div className="relative p-4 sm:p-8 rounded-3xl gradient-card border border-border shadow-elevated">
                 <div className="text-center mb-8">
                   <div className="inline-flex items-center justify-center w-16 h-16 rounded-2xl gradient-primary mb-4">
                     <TrendingUp className="w-8 h-8 text-primary-foreground" />

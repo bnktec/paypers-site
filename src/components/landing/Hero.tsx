@@ -20,7 +20,7 @@ const Hero = () => {
           </div>
 
           {/* Main heading */}
-          <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold leading-tight mb-6 text-balance animate-fade-up-delay-1">
+          <h1 className="text-2xl sm:text-3xl md:text-5xl lg:text-6xl font-bold leading-tight mb-6 text-balance animate-fade-up-delay-1">
             <span className="text-foreground">Paypers: inteligência, governança e eficiência em operações com </span>
             <span className="text-brand">precatórios</span>
           </h1>

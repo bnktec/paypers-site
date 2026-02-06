@@ -33,7 +33,7 @@ const DesagioSection = () => {
 
           <div className="grid lg:grid-cols-3 gap-8">
             <div className={cn(
-              "lg:col-span-1 p-8 rounded-2xl bg-brand-lightest/50 border border-brand/20 opacity-0 translate-y-10",
+              "lg:col-span-1 p-4 sm:p-8 rounded-2xl bg-brand-lightest/50 border border-brand/20 opacity-0 translate-y-10",
               isInView && "reveal-up"
             )}>
               <div className="flex items-center gap-3 mb-6">
@@ -54,7 +54,7 @@ const DesagioSection = () => {
 
             <div className="lg:col-span-2 grid md:grid-cols-2 gap-6">
               <div className={cn(
-                "p-8 rounded-2xl bg-secondary/30 border border-border hover:border-brand/30 transition-all duration-300 hover-lift opacity-0 translate-y-10",
+                "p-4 sm:p-8 rounded-2xl bg-secondary/30 border border-border hover:border-brand/30 transition-all duration-300 hover-lift opacity-0 translate-y-10",
                 isInView && "reveal-up stagger-delay-0"
               )}>
                 <div className="w-12 h-12 rounded-xl bg-brand/10 flex items-center justify-center mb-6">
@@ -68,7 +68,7 @@ const DesagioSection = () => {
               </div>
 
               <div className={cn(
-                "p-8 rounded-2xl bg-secondary/30 border border-border hover:border-brand/30 transition-all duration-300 hover-lift opacity-0 translate-y-10",
+                "p-4 sm:p-8 rounded-2xl bg-secondary/30 border border-border hover:border-brand/30 transition-all duration-300 hover-lift opacity-0 translate-y-10",
                 isInView && "reveal-up stagger-delay-1"
               )}>
                 <div className="w-12 h-12 rounded-xl bg-brand/10 flex items-center justify-center mb-6">

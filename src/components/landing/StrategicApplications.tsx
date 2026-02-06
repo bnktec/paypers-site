@@ -52,7 +52,7 @@ const StrategicApplications = () => {
             <div
               key={index}
               className={cn(
-                "group flex flex-col md:flex-row gap-6 p-8 rounded-2xl bg-secondary/30 border border-border hover:border-brand/30 hover:bg-brand-lightest/30 transition-all duration-300 opacity-0 translate-y-10",
+                "group flex flex-col md:flex-row gap-6 p-4 sm:p-8 rounded-2xl bg-secondary/30 border border-border hover:border-brand/30 hover:bg-brand-lightest/30 transition-all duration-300 opacity-0 translate-y-10",
                 isInView && `reveal-up stagger-delay-${index}`
               )}
             >

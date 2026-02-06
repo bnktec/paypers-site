@@ -73,7 +73,7 @@ const AnalysisTimeSection = () => {
           </div>
 
           <div className={cn(
-            "p-8 rounded-2xl bg-background border border-border shadow-card mb-12 opacity-0",
+            "p-4 sm:p-8 rounded-2xl bg-background border border-border shadow-card mb-12 opacity-0",
             isInView && "reveal-fade"
           )}>
             <div className="flex items-center gap-3 mb-6">
@@ -97,9 +97,9 @@ const AnalysisTimeSection = () => {
             "text-center opacity-0 translate-y-10",
             isInView && "reveal-up"
           )}>
-            <Button variant="hero" size="xl" className="group">
+            <Button variant="hero" size="lg" className="group w-full sm:w-auto text-sm sm:text-base md:text-lg px-4 sm:px-6 md:px-8">
               Enviar meu precatório para análise técnica
-              <ArrowRight className="w-5 h-5 group-hover:translate-x-1 transition-transform" />
+              <ArrowRight className="w-4 h-4 sm:w-5 sm:h-5 group-hover:translate-x-1 transition-transform" />
             </Button>
           </div>
         </div>

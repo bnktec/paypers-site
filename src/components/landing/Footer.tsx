@@ -51,7 +51,7 @@ const Footer = () => {
         </div>
 
         {/* Risk Warning */}
-        <div className="p-6 rounded-xl bg-brand-darker/50 border border-brand-dark/30 mb-8">
+        <div className="p-4 sm:p-6 rounded-xl bg-brand-darker/50 border border-brand-dark/30 mb-8">
           <div className="flex items-start gap-4">
             <AlertTriangle className="w-5 h-5 text-brand-light flex-shrink-0 mt-0.5" />
             <p className="text-sm text-brand-lighter/60 leading-relaxed">

@@ -28,9 +28,9 @@ const ForHolders = () => {
     <section className="py-24 gradient-dark text-primary-foreground" ref={ref}>
       <div className="container mx-auto px-4">
         <div className="max-w-5xl mx-auto">
-          <div className="grid lg:grid-cols-2 gap-16 items-center">
+          <div className="grid lg:grid-cols-2 gap-8 lg:gap-16 items-center">
             <div className="order-2 lg:order-1">
-              <div className="p-8 rounded-3xl bg-background/5 backdrop-blur-sm border border-primary-foreground/10">
+              <div className="p-4 sm:p-8 rounded-3xl bg-background/5 backdrop-blur-sm border border-primary-foreground/10">
                 <h3 className="text-xl font-bold mb-6 text-primary-foreground">
                   De documento complexo a estratégia clara
                 </h3>
@@ -60,7 +60,7 @@ const ForHolders = () => {
               <span className="inline-block text-sm font-medium text-brand-light mb-4 tracking-wider uppercase">
                 Para quem tem precatório
               </span>
-              <h2 className="text-3xl md:text-4xl font-bold mb-6 text-primary-foreground">
+              <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold mb-6 text-primary-foreground">
                 Transforme complexidade em clareza e resultado
               </h2>
               <p className="text-lg text-brand-lighter/80 leading-relaxed mb-8">
@@ -72,9 +72,9 @@ const ForHolders = () => {
                 equipe especializada ao seu lado.
               </p>
 
-              <Button variant="secondary" size="lg" className="group">
+              <Button variant="secondary" size="lg" className="group w-full sm:w-auto text-sm sm:text-base md:text-lg px-4 sm:px-6 md:px-8">
                 Quero que a Paypers avalie meu precatório
-                <ArrowRight className="w-5 h-5 group-hover:translate-x-1 transition-transform" />
+                <ArrowRight className="w-4 h-4 sm:w-5 sm:h-5 group-hover:translate-x-1 transition-transform" />
               </Button>
             </div>
           </div>

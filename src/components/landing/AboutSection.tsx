@@ -70,7 +70,7 @@ const AboutSection = () => {
           "max-w-3xl mx-auto opacity-0",
           isInView && "reveal-fade"
         )}>
-          <div className="p-8 rounded-2xl gradient-card border border-border shadow-card">
+          <div className="p-4 sm:p-8 rounded-2xl gradient-card border border-border shadow-card">
             <p className="text-muted-foreground leading-relaxed text-center">
               Nosso propósito é <strong className="text-foreground">reduzir a assimetria de informação</strong> do setor
               e elevar o padrão das operações por meio de{" "}

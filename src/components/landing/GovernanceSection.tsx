@@ -34,7 +34,7 @@ const GovernanceSection = () => {
   return (
     <section className="py-24 bg-background" ref={ref}>
       <div className="container mx-auto px-4">
-        <div className="grid lg:grid-cols-2 gap-16 items-center max-w-6xl mx-auto">
+        <div className="grid lg:grid-cols-2 gap-8 lg:gap-16 items-center max-w-6xl mx-auto">
           <div className={cn(
             "opacity-0 translate-y-10",
             isInView && "reveal-up"
@@ -50,7 +50,7 @@ const GovernanceSection = () => {
               Antes de incluir um crédito em qualquer operação — ou apresentá-lo a investidores —
               a Paypers aplica protocolos de governança e auditoria documental.
             </p>
-            <div className="p-6 rounded-2xl bg-brand-lightest/50 border border-brand/20">
+            <div className="p-4 sm:p-6 rounded-2xl bg-brand-lightest/50 border border-brand/20">
               <p className="text-muted-foreground">
                 O resultado é uma operação com mais <strong className="text-foreground">previsibilidade</strong>,
                 menos <strong className="text-foreground">surpresas</strong> e melhor{" "}

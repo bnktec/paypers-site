@@ -26,7 +26,7 @@ const BothRolesSection = () => {
 
           <div className="flex flex-col md:flex-row items-center justify-center gap-6 mb-12">
             <div className={cn(
-              "flex-1 max-w-xs p-8 rounded-2xl gradient-card border border-border shadow-card opacity-0 translate-y-10",
+              "flex-1 max-w-xs p-4 sm:p-8 rounded-2xl gradient-card border border-border shadow-card opacity-0 translate-y-10",
               isInView && "reveal-up stagger-delay-0"
             )}>
               <div className="w-14 h-14 rounded-2xl gradient-primary flex items-center justify-center mx-auto mb-4">
@@ -46,7 +46,7 @@ const BothRolesSection = () => {
             </div>
 
             <div className={cn(
-              "flex-1 max-w-xs p-8 rounded-2xl gradient-card border border-border shadow-card opacity-0 translate-y-10",
+              "flex-1 max-w-xs p-4 sm:p-8 rounded-2xl gradient-card border border-border shadow-card opacity-0 translate-y-10",
               isInView && "reveal-up stagger-delay-2"
             )}>
               <div className="w-14 h-14 rounded-2xl gradient-primary flex items-center justify-center mx-auto mb-4">
