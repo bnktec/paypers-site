@@ -42,6 +42,6 @@ yarn-error.log*
 *.tsbuildinfo
 next-env.d.ts
 
-# claude/ai tools
+# ai tools
 .agents
 .claude

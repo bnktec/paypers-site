@@ -24,32 +24,32 @@ Este projeto foi construído com:
 - **TanStack Query** - Gerenciamento de estado assíncrono
 - **React Hook Form** - Gerenciamento de formulários
 - **Zod** - Validação de schemas
+- **Bun** - Runtime e package manager
 
 ## Desenvolvimento Local
 
 ### Pré-requisitos
 
-- Node.js 18+ e npm instalados
-- Recomendamos o uso do [nvm](https://github.com/nvm-sh/nvm) para gerenciar versões do Node
+- Bun instalado ([instalar Bun](https://bun.sh))
 
 ### Instalação
 
 ```sh
 git clone https://github.com/bnktec/paypers-site.git
 cd paypers-site
-npm install
+bun install
 ```
 
 ### Scripts Disponíveis
 
 ```sh
-npm run dev         # Inicia servidor de desenvolvimento (porta 8080)
-npm run build       # Build de produção
-npm run build:dev   # Build em modo desenvolvimento
-npm run preview     # Preview do build de produção
-npm run lint        # Executa linting do código
-npm run test        # Executa testes unitários
-npm run test:watch  # Executa testes em modo watch
+bun run dev         # Inicia servidor de desenvolvimento (porta 8080)
+bun run build       # Build de produção
+bun run build:dev   # Build em modo desenvolvimento
+bun run preview     # Preview do build de produção
+bun run lint        # Executa linting do código
+bun run test        # Executa testes unitários
+bun run test:watch  # Executa testes em modo watch
 ```
 
 ## Estrutura do Projeto
@@ -63,25 +63,15 @@ paypers-site/
 │   ├── lib/            # Utilitários e configurações
 │   └── main.tsx        # Ponto de entrada da aplicação
 ├── public/             # Arquivos estáticos
-├── .claude/            # Regras e configurações do projeto
 └── vite.config.ts      # Configuração do Vite
 ```
-
-## Convenções de Código
-
-Este projeto segue regras específicas de código documentadas em `.claude/rules/`:
-
-- **no-comments.md**: Código auto-explicativo sem comentários
-- **no-emojis.md**: Comunicação profissional sem emojis
-
-Consulte os arquivos de regras para detalhes completos.
 
 ## Build e Deploy
 
 O projeto gera uma build otimizada de produção:
 
 ```sh
-npm run build
+bun run build
 ```
 
 Os arquivos de build serão gerados no diretório `dist/` e podem ser servidos por qualquer servidor de arquivos estáticos.
