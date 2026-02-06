@@ -1,6 +1,9 @@
-import { ArrowRight, Banknote, LineChart, Receipt } from "lucide-react";
+import { Banknote, LineChart, Receipt } from "lucide-react";
+import { cn } from "@/lib/utils";
+import { useInView } from "@/hooks/use-in-view";
 
 const OpportunitySection = () => {
+  const { ref, isInView } = useInView();
   const opportunities = [
     {
       icon: Banknote,
@@ -20,9 +23,12 @@ const OpportunitySection = () => {
   ];
 
   return (
-    <section className="py-24 bg-brand-lightest/30">
+    <section className="py-24 bg-brand-lightest/30" ref={ref}>
       <div className="container mx-auto px-4">
-        <div className="max-w-3xl mx-auto text-center mb-16">
+        <div className={cn(
+          "max-w-3xl mx-auto text-center mb-16 opacity-0 translate-y-10",
+          isInView && "reveal-up"
+        )}>
           <span className="inline-block text-sm font-medium text-brand mb-4 tracking-wider uppercase">
             Oportunidade
           </span>
@@ -40,7 +46,10 @@ const OpportunitySection = () => {
           {opportunities.map((item, index) => (
             <div
               key={index}
-              className="group relative p-8 rounded-2xl bg-background border border-border hover:border-brand/30 transition-all duration-300 hover-lift"
+              className={cn(
+                "group relative p-8 rounded-2xl bg-background border border-border hover:border-brand/30 transition-all duration-300 hover-lift opacity-0 translate-y-10",
+                isInView && `reveal-up stagger-delay-${index}`
+              )}
             >
               <div className="absolute top-0 left-0 w-full h-1 rounded-t-2xl gradient-primary opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
               <div className="w-14 h-14 rounded-2xl bg-brand-lighter/50 flex items-center justify-center mb-6 group-hover:bg-brand-light/30 transition-colors duration-300">
@@ -52,7 +61,10 @@ const OpportunitySection = () => {
           ))}
         </div>
 
-        <div className="text-center">
+        <div className={cn(
+          "text-center opacity-0 translate-y-10",
+          isInView && "reveal-up stagger-delay-3"
+        )}>
           <p className="text-muted-foreground max-w-2xl mx-auto">
             A Paypers organiza e estrutura essas possibilidades para que façam sentido para o seu perfil —{" "}
             <strong className="text-foreground">como investidor, detentor do crédito ou ambos</strong>.

@@ -1,7 +1,10 @@
 import { Button } from "@/components/ui/button";
 import { ArrowRight, BarChart3, FileCheck, Shield, TrendingUp, Users } from "lucide-react";
+import { cn } from "@/lib/utils";
+import { useInView } from "@/hooks/use-in-view";
 
 const ForInvestors = () => {
+  const { ref, isInView } = useInView();
   const benefits = [
     {
       icon: FileCheck,
@@ -31,11 +34,14 @@ const ForInvestors = () => {
   ];
 
   return (
-    <section id="investidores" className="py-24 bg-background">
+    <section id="investidores" className="py-24 bg-background" ref={ref}>
       <div className="container mx-auto px-4">
         <div className="max-w-6xl mx-auto">
           <div className="grid lg:grid-cols-2 gap-16 items-center">
-            <div>
+            <div className={cn(
+              "opacity-0 translate-y-10",
+              isInView && "reveal-up"
+            )}>
               <span className="inline-block text-sm font-medium text-brand mb-4 tracking-wider uppercase">
                 Para Investidores
               </span>
@@ -49,7 +55,13 @@ const ForInvestors = () => {
 
               <div className="grid grid-cols-2 gap-4 mb-8">
                 {benefits.map((benefit, index) => (
-                  <div key={index} className="flex items-start gap-3">
+                  <div
+                    key={index}
+                    className={cn(
+                      "flex items-start gap-3 opacity-0 translate-y-10",
+                      isInView && `reveal-up stagger-delay-${index}`
+                    )}
+                  >
                     <div className="w-8 h-8 rounded-lg bg-brand/10 flex items-center justify-center flex-shrink-0">
                       <benefit.icon className="w-4 h-4 text-brand-dark" />
                     </div>
@@ -67,7 +79,10 @@ const ForInvestors = () => {
               </Button>
             </div>
 
-            <div className="relative">
+            <div className={cn(
+              "relative opacity-0 scale-95",
+              isInView && "reveal-scale"
+            )}>
               <div className="absolute inset-0 gradient-primary rounded-3xl opacity-10 blur-3xl" />
               <div className="relative p-8 rounded-3xl gradient-card border border-border shadow-elevated">
                 <div className="text-center mb-8">
@@ -86,7 +101,10 @@ const ForInvestors = () => {
                     { label: "Correlação com Ibovespa", value: "Baixa" },
                     { label: "Lastro", value: "Crédito judicial" },
                   ].map((item, index) => (
-                    <div key={index} className="flex items-center justify-between p-4 rounded-xl bg-secondary/50">
+                    <div key={index} className={cn(
+                      "flex items-center justify-between p-4 rounded-xl bg-secondary/50 opacity-0 translate-y-10",
+                      isInView && `reveal-up stagger-delay-${index}`
+                    )}>
                       <span className="text-muted-foreground text-sm">{item.label}</span>
                       <span className="font-semibold text-brand-dark">{item.value}</span>
                     </div>

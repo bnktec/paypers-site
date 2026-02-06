@@ -1,7 +1,10 @@
 import { Button } from "@/components/ui/button";
 import { ArrowRight, Clock, FileText, CheckCircle2, Send } from "lucide-react";
+import { cn } from "@/lib/utils";
+import { useInView } from "@/hooks/use-in-view";
 
 const AnalysisTimeSection = () => {
+  const { ref, isInView } = useInView();
   const steps = [
     {
       icon: Send,
@@ -28,10 +31,13 @@ const AnalysisTimeSection = () => {
   ];
 
   return (
-    <section className="py-24 bg-brand-lightest/30">
+    <section className="py-24 bg-brand-lightest/30" ref={ref}>
       <div className="container mx-auto px-4">
         <div className="max-w-5xl mx-auto">
-          <div className="text-center mb-16">
+          <div className={cn(
+            "text-center mb-16 opacity-0 translate-y-10",
+            isInView && "reveal-up"
+          )}>
             <span className="inline-block text-sm font-medium text-brand mb-4 tracking-wider uppercase">
               Processo
             </span>
@@ -48,7 +54,13 @@ const AnalysisTimeSection = () => {
             <div className="hidden md:block absolute top-1/2 left-0 right-0 h-0.5 bg-brand/20 -translate-y-1/2" />
             <div className="grid md:grid-cols-3 gap-8">
               {steps.map((step, index) => (
-                <div key={index} className="relative flex flex-col items-center text-center">
+                <div
+                  key={index}
+                  className={cn(
+                    "relative flex flex-col items-center text-center opacity-0 translate-y-10",
+                    isInView && `reveal-up stagger-delay-${index}`
+                  )}
+                >
                   <div className="relative z-10 w-16 h-16 rounded-full gradient-primary flex items-center justify-center mb-6 shadow-card">
                     <step.icon className="w-7 h-7 text-primary-foreground" />
                   </div>
@@ -60,15 +72,20 @@ const AnalysisTimeSection = () => {
             </div>
           </div>
 
-          {/* Deliverables */}
-          <div className="p-8 rounded-2xl bg-background border border-border shadow-card mb-12">
+          <div className={cn(
+            "p-8 rounded-2xl bg-background border border-border shadow-card mb-12 opacity-0",
+            isInView && "reveal-fade"
+          )}>
             <div className="flex items-center gap-3 mb-6">
               <Clock className="w-6 h-6 text-brand" />
               <h3 className="font-semibold text-xl">O que você recebe no parecer:</h3>
             </div>
             <div className="grid md:grid-cols-2 gap-4">
               {deliverables.map((item, index) => (
-                <div key={index} className="flex items-center gap-3">
+                <div key={index} className={cn(
+                  "flex items-center gap-3 opacity-0 translate-y-10",
+                  isInView && `reveal-up stagger-delay-${index}`
+                )}>
                   <CheckCircle2 className="w-5 h-5 text-brand flex-shrink-0" />
                   <span className="text-muted-foreground">{item}</span>
                 </div>
@@ -76,8 +93,10 @@ const AnalysisTimeSection = () => {
             </div>
           </div>
 
-          {/* CTA */}
-          <div className="text-center">
+          <div className={cn(
+            "text-center opacity-0 translate-y-10",
+            isInView && "reveal-up"
+          )}>
             <Button variant="hero" size="xl" className="group">
               Enviar meu precatório para análise técnica
               <ArrowRight className="w-5 h-5 group-hover:translate-x-1 transition-transform" />

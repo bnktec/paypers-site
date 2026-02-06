@@ -1,7 +1,10 @@
 import { Button } from "@/components/ui/button";
 import { ArrowRight, FileSearch, Scale, Users, Wallet } from "lucide-react";
+import { cn } from "@/lib/utils";
+import { useInView } from "@/hooks/use-in-view";
 
 const ForHolders = () => {
+  const { ref, isInView } = useInView();
   const services = [
     {
       icon: Scale,
@@ -22,7 +25,7 @@ const ForHolders = () => {
   ];
 
   return (
-    <section className="py-24 gradient-dark text-primary-foreground">
+    <section className="py-24 gradient-dark text-primary-foreground" ref={ref}>
       <div className="container mx-auto px-4">
         <div className="max-w-5xl mx-auto">
           <div className="grid lg:grid-cols-2 gap-16 items-center">
@@ -35,7 +38,10 @@ const ForHolders = () => {
                   {services.map((service, index) => (
                     <div
                       key={index}
-                      className="flex items-start gap-4 p-4 rounded-xl bg-background/5 border border-primary-foreground/5 hover:bg-background/10 transition-colors duration-300"
+                      className={cn(
+                        "flex items-start gap-4 p-4 rounded-xl bg-background/5 border border-primary-foreground/5 hover:bg-background/10 transition-colors duration-300 opacity-0 translate-y-10",
+                        isInView && `reveal-up stagger-delay-${index}`
+                      )}
                     >
                       <div className="w-10 h-10 rounded-lg bg-brand-light/20 flex items-center justify-center flex-shrink-0">
                         <service.icon className="w-5 h-5 text-brand-light" />
@@ -47,7 +53,10 @@ const ForHolders = () => {
               </div>
             </div>
 
-            <div className="order-1 lg:order-2">
+            <div className={cn(
+              "order-1 lg:order-2 opacity-0 translate-y-10",
+              isInView && "reveal-up"
+            )}>
               <span className="inline-block text-sm font-medium text-brand-light mb-4 tracking-wider uppercase">
                 Para quem tem precatório
               </span>

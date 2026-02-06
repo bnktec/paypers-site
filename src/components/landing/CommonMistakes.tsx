@@ -1,6 +1,9 @@
 import { AlertCircle, X, CheckCircle2 } from "lucide-react";
+import { cn } from "@/lib/utils";
+import { useInView } from "@/hooks/use-in-view";
 
 const CommonMistakes = () => {
+  const { ref, isInView } = useInView();
   const mistakes = [
     "Comprar ou vender sem validação jurídica completa",
     "Ignorar a classificação do crédito ao estimar prazo e risco",
@@ -10,10 +13,13 @@ const CommonMistakes = () => {
   ];
 
   return (
-    <section className="py-24 bg-brand-lightest/30">
+    <section className="py-24 bg-brand-lightest/30" ref={ref}>
       <div className="container mx-auto px-4">
         <div className="max-w-4xl mx-auto">
-          <div className="text-center mb-16">
+          <div className={cn(
+            "text-center mb-16 opacity-0 translate-y-10",
+            isInView && "reveal-up"
+          )}>
             <span className="inline-block text-sm font-medium text-brand mb-4 tracking-wider uppercase">
               Atenção
             </span>
@@ -27,7 +33,10 @@ const CommonMistakes = () => {
 
           <div className="grid md:grid-cols-2 gap-8">
             <div className="space-y-4">
-              <div className="flex items-center gap-3 mb-6">
+              <div className={cn(
+                "flex items-center gap-3 mb-6 opacity-0 translate-y-10",
+                isInView && "reveal-up stagger-delay-0"
+              )}>
                 <div className="w-10 h-10 rounded-full bg-destructive/10 flex items-center justify-center">
                   <AlertCircle className="w-5 h-5 text-destructive" />
                 </div>
@@ -36,7 +45,10 @@ const CommonMistakes = () => {
               {mistakes.map((mistake, index) => (
                 <div
                   key={index}
-                  className="flex items-start gap-3 p-4 rounded-xl bg-destructive/5 border border-destructive/10"
+                  className={cn(
+                    "flex items-start gap-3 p-4 rounded-xl bg-destructive/5 border border-destructive/10 opacity-0 translate-y-10",
+                    isInView && `reveal-up stagger-delay-${index + 1}`
+                  )}
                 >
                   <X className="w-5 h-5 text-destructive flex-shrink-0 mt-0.5" />
                   <p className="text-muted-foreground text-sm">{mistake}</p>
@@ -44,7 +56,10 @@ const CommonMistakes = () => {
               ))}
             </div>
 
-            <div className="flex flex-col justify-center">
+            <div className={cn(
+              "flex flex-col justify-center opacity-0 translate-y-10",
+              isInView && "reveal-up stagger-delay-6"
+            )}>
               <div className="p-8 rounded-2xl gradient-card border border-border shadow-card">
                 <div className="flex items-center gap-3 mb-6">
                   <div className="w-10 h-10 rounded-full bg-brand/10 flex items-center justify-center">

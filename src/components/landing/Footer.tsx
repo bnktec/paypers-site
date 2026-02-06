@@ -1,6 +1,9 @@
 import { AlertTriangle } from "lucide-react";
+import { cn } from "@/lib/utils";
+import { useInView } from "@/hooks/use-in-view";
 
 const Footer = () => {
+  const { ref, isInView } = useInView();
   const links = [
     { label: "Início", href: "#" },
     { label: "Como funciona", href: "#como-funciona" },
@@ -11,8 +14,11 @@ const Footer = () => {
   ];
 
   return (
-    <footer className="bg-brand-darkest text-brand-lighter/80">
-      <div className="container mx-auto px-4 py-16">
+    <footer className="bg-brand-darkest text-brand-lighter/80" ref={ref}>
+      <div className={cn(
+        "container mx-auto px-4 py-16 opacity-0",
+        isInView && "reveal-fade"
+      )}>
         <div className="grid lg:grid-cols-3 gap-12 mb-12">
           {/* Brand & Description */}
           <div className="lg:col-span-2">
