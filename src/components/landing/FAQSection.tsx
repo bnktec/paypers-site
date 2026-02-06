@@ -4,8 +4,11 @@ import {
   AccordionItem,
   AccordionTrigger,
 } from "@/components/ui/accordion";
+import { cn } from "@/lib/utils";
+import { useInView } from "@/hooks/use-in-view";
 
 const FAQSection = () => {
+  const { ref, isInView } = useInView();
   const faqs = [
     {
       question: "Preciso ter precatório para investir com a Paypers?",
@@ -30,10 +33,13 @@ const FAQSection = () => {
   ];
 
   return (
-    <section id="faq" className="py-24 bg-brand-lightest/30">
+    <section id="faq" className="py-24 bg-brand-lightest/30" ref={ref}>
       <div className="container mx-auto px-4">
         <div className="max-w-3xl mx-auto">
-          <div className="text-center mb-16">
+          <div className={cn(
+            "text-center mb-16 opacity-0 translate-y-10",
+            isInView && "reveal-up"
+          )}>
             <span className="inline-block text-sm font-medium text-brand mb-4 tracking-wider uppercase">
               FAQ
             </span>
@@ -45,7 +51,10 @@ const FAQSection = () => {
               <AccordionItem
                 key={index}
                 value={`item-${index}`}
-                className="bg-background border border-border rounded-xl px-6 data-[state=open]:shadow-card transition-shadow duration-300"
+                className={cn(
+                  "bg-background border border-border rounded-xl px-6 data-[state=open]:shadow-card transition-shadow duration-300 opacity-0 translate-y-10",
+                  isInView && `reveal-up stagger-delay-${index}`
+                )}
               >
                 <AccordionTrigger className="text-left font-semibold hover:no-underline py-6">
                   {faq.question}

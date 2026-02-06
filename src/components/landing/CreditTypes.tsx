@@ -1,6 +1,9 @@
 import { Clock, Shield, TrendingUp } from "lucide-react";
+import { cn } from "@/lib/utils";
+import { useInView } from "@/hooks/use-in-view";
 
 const CreditTypes = () => {
+  const { ref, isInView } = useInView();
   const creditTypes = [
     {
       icon: Clock,
@@ -32,9 +35,12 @@ const CreditTypes = () => {
   ];
 
   return (
-    <section id="precatorios" className="py-24 gradient-dark text-primary-foreground">
+    <section id="precatorios" className="py-24 gradient-dark text-primary-foreground" ref={ref}>
       <div className="container mx-auto px-4">
-        <div className="max-w-3xl mx-auto text-center mb-16">
+        <div className={cn(
+          "max-w-3xl mx-auto text-center mb-16 opacity-0 translate-y-10",
+          isInView && "reveal-up"
+        )}>
           <span className="inline-block text-sm font-medium text-brand-light mb-4 tracking-wider uppercase">
             Tipos de Crédito
           </span>
@@ -53,7 +59,10 @@ const CreditTypes = () => {
           {creditTypes.map((type, index) => (
             <div
               key={index}
-              className="group p-8 rounded-2xl bg-background/5 backdrop-blur-sm border border-primary-foreground/10 hover:border-brand-light/30 hover:bg-background/10 transition-all duration-300"
+              className={cn(
+                "group p-4 sm:p-8 rounded-2xl bg-background/5 backdrop-blur-sm border border-primary-foreground/10 hover:border-brand-light/30 hover:bg-background/10 transition-all duration-300 opacity-0 translate-y-10",
+                isInView && `reveal-up stagger-delay-${index}`
+              )}
             >
               <div className="flex items-center justify-between mb-6">
                 <div className="w-12 h-12 rounded-xl bg-brand-light/20 flex items-center justify-center">
@@ -70,7 +79,10 @@ const CreditTypes = () => {
           ))}
         </div>
 
-        <div className="text-center">
+        <div className={cn(
+          "text-center opacity-0 translate-y-10",
+          isInView && "reveal-up stagger-delay-3"
+        )}>
           <p className="text-brand-lighter/70 max-w-2xl mx-auto">
             A Paypers classifica tecnicamente cada crédito e pondera esses fatores na estruturação das operações.
           </p>

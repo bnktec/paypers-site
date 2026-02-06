@@ -1,6 +1,9 @@
 import { CheckCircle2, FileSearch, Scale, Shield, Building2, AlertTriangle } from "lucide-react";
+import { cn } from "@/lib/utils";
+import { useInView } from "@/hooks/use-in-view";
 
 const GovernanceSection = () => {
+  const { ref, isInView } = useInView();
   const checklistItems = [
     {
       icon: FileSearch,
@@ -29,10 +32,13 @@ const GovernanceSection = () => {
   ];
 
   return (
-    <section className="py-24 bg-background">
+    <section className="py-24 bg-background" ref={ref}>
       <div className="container mx-auto px-4">
-        <div className="grid lg:grid-cols-2 gap-16 items-center max-w-6xl mx-auto">
-          <div>
+        <div className="grid lg:grid-cols-2 gap-8 lg:gap-16 items-center max-w-6xl mx-auto">
+          <div className={cn(
+            "opacity-0 translate-y-10",
+            isInView && "reveal-up"
+          )}>
             <span className="inline-block text-sm font-medium text-brand mb-4 tracking-wider uppercase">
               Governança
             </span>
@@ -44,7 +50,7 @@ const GovernanceSection = () => {
               Antes de incluir um crédito em qualquer operação — ou apresentá-lo a investidores —
               a Paypers aplica protocolos de governança e auditoria documental.
             </p>
-            <div className="p-6 rounded-2xl bg-brand-lightest/50 border border-brand/20">
+            <div className="p-4 sm:p-6 rounded-2xl bg-brand-lightest/50 border border-brand/20">
               <p className="text-muted-foreground">
                 O resultado é uma operação com mais <strong className="text-foreground">previsibilidade</strong>,
                 menos <strong className="text-foreground">surpresas</strong> e melhor{" "}
@@ -57,8 +63,10 @@ const GovernanceSection = () => {
             {checklistItems.map((item, index) => (
               <div
                 key={index}
-                className="group flex items-start gap-4 p-5 rounded-xl bg-secondary/30 border border-border hover:border-brand/30 hover:bg-brand-lightest/30 transition-all duration-300"
-                style={{ animationDelay: `${index * 0.1}s` }}
+                className={cn(
+                  "group flex items-start gap-4 p-5 rounded-xl bg-secondary/30 border border-border hover:border-brand/30 hover:bg-brand-lightest/30 transition-all duration-300 opacity-0 translate-y-10",
+                  isInView && `reveal-up stagger-delay-${index}`
+                )}
               >
                 <div className="flex-shrink-0 w-10 h-10 rounded-lg bg-brand/10 flex items-center justify-center group-hover:bg-brand/20 transition-colors duration-300">
                   <item.icon className="w-5 h-5 text-brand-dark" />

@@ -1,5 +1,9 @@
 # Paypers
 
+<div align="center">
+  <img src="./public/logo-light.png" alt="Paypers Logo" width="200" />
+</div>
+
 Plataforma especializada em estruturação, análise e intermediação de operações com precatórios e RPVs. Conectamos investidores e credores com governança, dados e rigor jurídico.
 
 ## Sobre o Projeto

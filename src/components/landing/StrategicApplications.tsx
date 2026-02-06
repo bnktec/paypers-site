@@ -1,6 +1,9 @@
 import { BarChart3, FileCheck, Wallet } from "lucide-react";
+import { cn } from "@/lib/utils";
+import { useInView } from "@/hooks/use-in-view";
 
 const StrategicApplications = () => {
+  const { ref, isInView } = useInView();
   const applications = [
     {
       number: "01",
@@ -26,9 +29,12 @@ const StrategicApplications = () => {
   ];
 
   return (
-    <section className="py-24 bg-background">
+    <section className="py-24 bg-background" ref={ref}>
       <div className="container mx-auto px-4">
-        <div className="max-w-3xl mx-auto text-center mb-16">
+        <div className={cn(
+          "max-w-3xl mx-auto text-center mb-16 opacity-0 translate-y-10",
+          isInView && "reveal-up"
+        )}>
           <span className="inline-block text-sm font-medium text-brand mb-4 tracking-wider uppercase">
             Aplicações
           </span>
@@ -45,7 +51,10 @@ const StrategicApplications = () => {
           {applications.map((app, index) => (
             <div
               key={index}
-              className="group flex flex-col md:flex-row gap-6 p-8 rounded-2xl bg-secondary/30 border border-border hover:border-brand/30 hover:bg-brand-lightest/30 transition-all duration-300"
+              className={cn(
+                "group flex flex-col md:flex-row gap-6 p-4 sm:p-8 rounded-2xl bg-secondary/30 border border-border hover:border-brand/30 hover:bg-brand-lightest/30 transition-all duration-300 opacity-0 translate-y-10",
+                isInView && `reveal-up stagger-delay-${index}`
+              )}
             >
               <div className="flex-shrink-0">
                 <span className="text-5xl font-bold text-brand/20 group-hover:text-brand/40 transition-colors duration-300">

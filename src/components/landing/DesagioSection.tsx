@@ -1,6 +1,9 @@
 import { ArrowDownRight, Calculator, Users } from "lucide-react";
+import { cn } from "@/lib/utils";
+import { useInView } from "@/hooks/use-in-view";
 
 const DesagioSection = () => {
+  const { ref, isInView } = useInView();
   const factors = [
     "Tipo do crédito (RPV, alimentar, comum)",
     "Ente devedor",
@@ -9,10 +12,13 @@ const DesagioSection = () => {
   ];
 
   return (
-    <section className="py-24 bg-background">
+    <section className="py-24 bg-background" ref={ref}>
       <div className="container mx-auto px-4">
         <div className="max-w-5xl mx-auto">
-          <div className="text-center mb-16">
+          <div className={cn(
+            "text-center mb-16 opacity-0 translate-y-10",
+            isInView && "reveal-up"
+          )}>
             <span className="inline-block text-sm font-medium text-brand mb-4 tracking-wider uppercase">
               Precificação
             </span>
@@ -26,8 +32,10 @@ const DesagioSection = () => {
           </div>
 
           <div className="grid lg:grid-cols-3 gap-8">
-            {/* Factors card */}
-            <div className="lg:col-span-1 p-8 rounded-2xl bg-brand-lightest/50 border border-brand/20">
+            <div className={cn(
+              "lg:col-span-1 p-4 sm:p-8 rounded-2xl bg-brand-lightest/50 border border-brand/20 opacity-0 translate-y-10",
+              isInView && "reveal-up"
+            )}>
               <div className="flex items-center gap-3 mb-6">
                 <div className="w-10 h-10 rounded-xl bg-brand/10 flex items-center justify-center">
                   <Calculator className="w-5 h-5 text-brand-dark" />
@@ -44,9 +52,11 @@ const DesagioSection = () => {
               </ul>
             </div>
 
-            {/* Role cards */}
             <div className="lg:col-span-2 grid md:grid-cols-2 gap-6">
-              <div className="p-8 rounded-2xl bg-secondary/30 border border-border hover:border-brand/30 transition-all duration-300 hover-lift">
+              <div className={cn(
+                "p-4 sm:p-8 rounded-2xl bg-secondary/30 border border-border hover:border-brand/30 transition-all duration-300 hover-lift opacity-0 translate-y-10",
+                isInView && "reveal-up stagger-delay-0"
+              )}>
                 <div className="w-12 h-12 rounded-xl bg-brand/10 flex items-center justify-center mb-6">
                   <Users className="w-6 h-6 text-brand-dark" />
                 </div>
@@ -57,7 +67,10 @@ const DesagioSection = () => {
                 </p>
               </div>
 
-              <div className="p-8 rounded-2xl bg-secondary/30 border border-border hover:border-brand/30 transition-all duration-300 hover-lift">
+              <div className={cn(
+                "p-4 sm:p-8 rounded-2xl bg-secondary/30 border border-border hover:border-brand/30 transition-all duration-300 hover-lift opacity-0 translate-y-10",
+                isInView && "reveal-up stagger-delay-1"
+              )}>
                 <div className="w-12 h-12 rounded-xl bg-brand/10 flex items-center justify-center mb-6">
                   <Calculator className="w-6 h-6 text-brand-dark" />
                 </div>
@@ -70,7 +83,10 @@ const DesagioSection = () => {
             </div>
           </div>
 
-          <div className="mt-12 text-center">
+          <div className={cn(
+            "mt-12 text-center opacity-0 translate-y-10",
+            isInView && "reveal-up stagger-delay-2"
+          )}>
             <p className="text-muted-foreground max-w-2xl mx-auto">
               Você sabe exatamente em que operação está entrando e quais são os cenários possíveis.
             </p>

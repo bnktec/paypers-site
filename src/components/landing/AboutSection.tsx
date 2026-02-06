@@ -1,6 +1,9 @@
 import { Database, Scale, Shield, TrendingUp } from "lucide-react";
+import { cn } from "@/lib/utils";
+import { useInView } from "@/hooks/use-in-view";
 
 const AboutSection = () => {
+  const { ref, isInView } = useInView();
   const features = [
     {
       icon: Scale,
@@ -25,9 +28,12 @@ const AboutSection = () => {
   ];
 
   return (
-    <section id="como-funciona" className="py-24 bg-background">
+    <section id="como-funciona" className="py-24 bg-background" ref={ref}>
       <div className="container mx-auto px-4">
-        <div className="max-w-3xl mx-auto text-center mb-16">
+        <div className={cn(
+          "max-w-3xl mx-auto text-center mb-16 opacity-0 translate-y-10",
+          isInView && "reveal-up"
+        )}>
           <span className="inline-block text-sm font-medium text-brand mb-4 tracking-wider uppercase">
             Sobre a Paypers
           </span>
@@ -46,7 +52,10 @@ const AboutSection = () => {
           {features.map((feature, index) => (
             <div
               key={index}
-              className="group p-6 rounded-2xl bg-secondary/50 border border-border hover:border-brand/30 hover:bg-brand-lightest/50 transition-all duration-300 hover-lift"
+              className={cn(
+                "group p-6 rounded-2xl bg-secondary/50 border border-border hover:border-brand/30 hover:bg-brand-lightest/50 transition-all duration-300 hover-lift opacity-0 translate-y-10",
+                isInView && `reveal-up stagger-delay-${index}`
+              )}
             >
               <div className="w-12 h-12 rounded-xl gradient-primary flex items-center justify-center mb-4 group-hover:scale-110 transition-transform duration-300">
                 <feature.icon className="w-6 h-6 text-primary-foreground" />
@@ -57,8 +66,11 @@ const AboutSection = () => {
           ))}
         </div>
 
-        <div className="max-w-3xl mx-auto">
-          <div className="p-8 rounded-2xl gradient-card border border-border shadow-card">
+        <div className={cn(
+          "max-w-3xl mx-auto opacity-0",
+          isInView && "reveal-fade"
+        )}>
+          <div className="p-4 sm:p-8 rounded-2xl gradient-card border border-border shadow-card">
             <p className="text-muted-foreground leading-relaxed text-center">
               Nosso propósito é <strong className="text-foreground">reduzir a assimetria de informação</strong> do setor
               e elevar o padrão das operações por meio de{" "}
