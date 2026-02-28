@@ -8,15 +8,11 @@ frontend:
     build:
       commands:
         - npm run build
-    postBuild:
-      commands:
-        - npm prune --omit=dev || true
-        - chmod +x bin/postbuild.sh
-        - ./bin/postbuild.sh
   artifacts:
-    baseDirectory: .amplify-hosting
+    baseDirectory: .next
     files:
       - "**/*"
   cache:
     paths:
       - node_modules/**/*
+      - .next/cache/**/*
