@@ -1,6 +1,6 @@
 import Link from "next/link"
 import Navbar from "../Navbar"
-export default function Header3({ handleSearch, handleContactPopup, handleMobileMenu }) {
+export default function Header3({ handleContactPopup, handleMobileMenu }) {
     return (
         <>
             <div className="header_area " id="header_contents">
@@ -10,38 +10,26 @@ export default function Header3({ handleSearch, handleContactPopup, handleMobile
                             <div className="col-lg-12">
                                 <div className="top_inner">
                                     <div className="left_side common_css">
-                                        <div className="contntent address">
-                                            <i className="icon-placeholder" />
-                                            <div className="text">
-                                                <span>61W Business Str Hobert, LA </span>
-                                            </div>
-                                        </div>
                                         <div className="contntent email">
                                             <i className="icon-email" />
                                             <div className="text">
-                                                <Link href="mailto:sendmail@creote.com">sendmail@creote.com</Link>
+                                                <Link href="mailto:contato@paypers.com.br">contato@paypers.com.br</Link>
                                             </div>
                                         </div>
                                     </div>
                                     <div className="right_side common_css">
                                         <div className="contntent media">
                                             <div className="text">
-                                                <Link href="#" >
-                                                    <i className="fa fa-facebook" />
+                                                <Link href="https://facebook.com/paypersoficial" target="_blank" rel="noopener noreferrer">
+                                                    <i className="fa fa-facebook" style={{ fontSize: '18px' }} />
                                                 </Link>
-                                                <Link href="#" >
-                                                    <i className="fa fa-twitter" />
-                                                </Link>
-                                                <Link href="#" >
-                                                    <i className="fa fa-skype" />
-                                                </Link>
-                                                <Link href="#" >
-                                                    <i className="fa fa-telegram" />
+                                                <Link href="https://instagram.com/paypersoficial" target="_blank" rel="noopener noreferrer">
+                                                    <i className="fa fa-instagram" style={{ fontSize: '18px' }} />
                                                 </Link>
                                             </div>
                                         </div>
                                         <div className="contntent cbutton">
-                                            <Link href="#" className="theme-btn three"> Get In Touch </Link>
+                                            <Link href="https://wa.me/550000000000" target="_blank" rel="noopener noreferrer" className="theme-btn three"> Falar com Especialista </Link>
                                         </div>
                                     </div>
                                 </div>
@@ -56,15 +44,15 @@ export default function Header3({ handleSearch, handleContactPopup, handleMobile
                                 <div className="header_log_outer">
                                     <div className="header_logo_box">
                                         <Link href="/" className="logo navbar-brand">
-                                            <img src="assets/images/logo-white-1.png" alt="Creote Elementor" className="logo_default" />
-                                            <img src="assets/images/logo-default.png" alt="Creote Elementor" className="logo__sticky" />
+                                            <img src="assets/images/paypers-logo.png" alt="Paypers" className="logo_default" />
+                                            <img src="assets/images/paypers-logo.png" alt="Paypers" className="logo__sticky" />
                                         </Link>
                                     </div>
                                     <div className="phone_box">
-                                        <i className="icon-phone-call1" />
+                                        <i className="fa fa-whatsapp" />
                                         <div className="text">
-                                            <small>Phone</small>
-                                            <Link href="tel:+9806071234">+9806071234</Link>
+                                            <small>WhatsApp</small>
+                                            <Link href="https://wa.me/550000000000" target="_blank" rel="noopener noreferrer">(00) 00000-0000</Link>
                                         </div>
                                     </div>
                                 </div>
@@ -83,9 +71,6 @@ export default function Header3({ handleSearch, handleContactPopup, handleMobile
                                     </div>
                                     <div className="header_right_content">
                                         <ul>
-                                            <li>
-                                                <button type="button" className="search-toggler" onClick={handleSearch}><i className="icon-search" /></button>
-                                            </li>
                                             <li>
                                                 <button type="button" className="contact-toggler" onClick={handleContactPopup}><i className="icon-setup-dots" /></button>
                                             </li>

@@ -11,29 +11,30 @@ export default function Footer3({ }) {
                 <div className="footer_widgets_wrap">
                     <div className="auto-container">
                         <div className="row">
-                            <div className="col-xl-3 col-lg-6 col-md-12 col-sm-12 mb-5 mb-lg-5 mb-xl-0">
+                            <div className="col-xl-6 col-lg-6 col-md-12 col-sm-12 mb-5 mb-lg-5 mb-xl-0">
                                 <div className="footer_widgets about_company light_color">
                                     <div className="about_company_inner">
                                         <div className="footer_logo">
                                             <Link href="#" target="_blank" >
-                                                <img src="assets/images/logo-white.png" alt="logo" />
+                                                <img src="/assets/images/paypers-logo.png" alt="Paypers" style={{ filter: 'brightness(0) invert(1)' }} />
                                             </Link>
                                             {/*===============spacing==============*/}
                                             <div className="pd_bottom_30" />
                                             {/*===============spacing==============*/}
                                         </div>
                                         <div className="content_box">
-                                            <p>The great explorer of the truth, the master-builder of human happiness no one rejects
-                                                dislikes avoids pleasure itself because it is pleasure but because know who do not
-                                                those how to pursue</p>
+                                            <p>Atuamos na estruturação, intermediação e aquisição de precatórios, além da
+                                                construção de estratégias em transação tributária. Nosso foco é unir
+                                                inteligência jurídica e eficiência financeira para gerar liquidez, redução de
+                                                passivos e oportunidades de investimento seguras.</p>
                                             <div className="consulting">
                                                 <div className="image">
-                                                    <img src="assets/images/authour-image.png" alt="need help" />
+                                                    <img src="assets/images/app-icon.png" alt="need help" />
                                                 </div>
                                                 <div className="help_con">
-                                                    <h6>Need Help?</h6>
+                                                    <h6>Conhecer as Soluções</h6>
                                                     <h2>
-                                                        <Link href="#" target="_blank" > Free Consultation</Link>
+                                                        <Link href="https://wa.me/550000000000" target="_blank" rel="noopener noreferrer">Falar com um Especialista</Link>
                                                     </h2>
                                                 </div>
                                             </div>
@@ -47,111 +48,48 @@ export default function Footer3({ }) {
                                     <div className="pd_top_20" />
                                     {/*===============spacing==============*/}
                                     <div className="fo_wid_title">
-                                        <h2>Informations</h2>
+                                        <h2>Informação</h2>
                                     </div>
                                 </div>
                                 <div className="footer_widgets clearfix navigation_foo light_color style_one">
                                     <div className="navigation_foo_box">
                                         <div className="navigation_foo_inner">
                                             <ul className="menu">
-                                                <li><Link href="#">Services</Link></li>
-                                                <li><Link href="#">Infrastructure</Link></li>
-                                                <li><Link href="#">Client Support</Link></li>
-                                                <li><Link href="#">Privacy policy</Link></li>
-                                                <li><Link href="#">Terms of use</Link></li>
-                                                <li><Link href="#">Sitemap</Link></li>
-                                                <li><Link href="#">Careers</Link></li>
+                                                <li><Link href="/precatorios">Venda de Precatórios</Link></li>
+                                                <li><Link href="/tributaria">Transação Tributária</Link></li>
+                                                <li><Link href="/investimentos">Investidores</Link></li>
                                             </ul>
                                         </div>
                                     </div>
                                 </div>
                             </div>
-                            <div className="col-xl-4 col-lg-6 col-md-12 col-sm-12 mb-5 mb-lg-0 mb-xl-0">
+                            <div className="col-xl-3 col-lg-6 col-md-12 col-sm-12 ms-auto">
                                 <div className="footer_widgets wid_tit style_two">
                                     {/*===============spacing==============*/}
                                     <div className="pd_top_20" />
                                     {/*===============spacing==============*/}
-                                    <div className="fo_wid_title">
-                                        <h2>Recent Posts</h2>
-                                    </div>
                                 </div>
-                                <div className="footer_widgets recent_news_em_wp style_one  clearfix">
-                                    <div className="news_boxed light_color">
-                                        <div className="news_recent clearfix image_s">
-                                            <div className="image ">
-                                                <img width={750} height={420} src="assets/images/blog/blog-image-9.jpg" className="img-fluid" alt="img" loading="lazy" />
-                                            </div>
-                                            <div className="content ">
-                                                <h2 className="title"><Link href="/blog-single" >Why Should Business Payroll
-                                                    Outsourcing?</Link></h2>
-                                                <Link className="date" href="#"><span className="fa fa-clock-o" />October 8, {new Date().getFullYear()}</Link>
-                                            </div>
+                                <div className="footer_widgets clearfix navigation_foo light_color style_one">
+                                    <div className="navigation_foo_box">
+                                        <div className="navigation_foo_inner">
+                                            <ul className="menu">
+                                                <li><Link href="/sobre">Sobre</Link></li>
+                                                <li><Link href="#">Política de Privacidade</Link></li>
+                                                <li><Link href="#">Termos &amp; Condições</Link></li>
+                                                <li><Link href="/contato">Contatos</Link></li>
+                                            </ul>
                                         </div>
-                                        <div className="news_recent clearfix image_s">
-                                            <div className="image ">
-                                                <img width={750} height={420} src="assets/images/blog/blog-image-8.jpg" className="img-fluid" alt="img" loading="lazy" />
-                                            </div>
-                                            <div className="content ">
-                                                <h2 className="title"><Link href="/blog-single" >Most Employees Support
-                                                    Measures</Link></h2>
-                                                <Link className="date" href="#"><span className="fa fa-clock-o" />October 8, {new Date().getFullYear()}</Link>
-                                            </div>
-                                        </div>
-                                        <div className="news_recent clearfix image_s">
-                                            <div className="image ">
-                                                <img width={750} height={420} src="assets/images/blog/blog-image-7.jpg" className="img-fluid" alt="img" loading="lazy" />
-                                            </div>
-                                            <div className="content ">
-                                                <h2 className="title"><Link href="/blog-single" >How to Handle Employee</Link>
-                                                </h2>
-                                                <Link className="date" href="#"><span className="fa fa-clock-o" />October 8, {new Date().getFullYear()}</Link>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                            <div className="col-xl-3 col-lg-6 col-md-12 col-sm-12">
-                                <div className="footer_widgets wid_tit style_two">
-                                    {/*===============spacing==============*/}
-                                    <div className="pd_top_20" />
-                                    {/*===============spacing==============*/}
-                                    <div className="fo_wid_title">
-                                        <h2>Subscribe Us Today</h2>
-                                    </div>
-                                </div>
-                                <div className="footer_widgets foo_subscribe light_color style_one">
-                                    <div className="item_subscribe with_text">
-                                        <p>Subscribe Us &amp; Recive Our Offers and Updates i Your Inbox Directly.</p>
-                                        <div className="shortcodes">
-                                            <form className="mc4wp-form" method="post" data-name="Subscibe">
-                                                <div className="mc4wp-form-fields">
-                                                    <input type="email" name="EMAIL" placeholder="Your email address" required />
-                                                    <input type="submit" defaultValue="Sign up" />
-                                                </div>
-                                            </form>
-                                        </div>
-                                        <p>* We do not share your email id</p>
                                     </div>
                                 </div>
                                 <div className="social_media_v_one">
                                     <ul>
                                         <li>
-                                            <Link href="#"> <span className="fa fa-facebook" />
+                                            <Link href="https://facebook.com/paypersoficial" target="_blank" rel="noopener noreferrer"> <span className="fa fa-facebook" />
                                                 <small>facebook</small>
                                             </Link>
                                         </li>
                                         <li>
-                                            <Link href="#"> <span className="fa fa-twitter" />
-                                                <small>twitter</small>
-                                            </Link>
-                                        </li>
-                                        <li>
-                                            <Link href="#"> <span className="fa fa-skype" />
-                                                <small>skype</small>
-                                            </Link>
-                                        </li>
-                                        <li>
-                                            <Link href="#"> <span className="fa fa-instagram" />
+                                            <Link href="https://instagram.com/paypersoficial" target="_blank" rel="noopener noreferrer"> <span className="fa fa-instagram" />
                                                 <small>instagram</small>
                                             </Link>
                                         </li>
@@ -170,26 +108,9 @@ export default function Footer3({ }) {
                     {/*===============spacing==============*/}
                     <div className="auto-container">
                         <div className="row">
-                            <div className="col-lg-6 col-md-12 mb-2 mb-lg-0 mb-xl-0">
-                                <div className="footer_copy_content color_white">
-                                    © {new Date().getFullYear()} <Link href="https://themeforest.net/user/steelthemes" className="color_white">Steelthemes.</Link>
-                                    All Rights
-                                    Reserved.
-                                </div>
-                            </div>
-                            <div className="col-lg-6 col-md-12">
-                                <div className="nav_link_v_one text-md-end">
-                                    <ul>
-                                        <li>
-                                            <Link className="color_white" href="#" target="_blank" >Terms Of User</Link>
-                                        </li>
-                                        <li>
-                                            <Link className="color_white" href="#" target="_blank" >Support</Link>
-                                        </li>
-                                        <li>
-                                            <Link className="color_white" href="#" target="_blank" >Private Policy</Link>
-                                        </li>
-                                    </ul>
+                            <div className="col-lg-12 col-md-12">
+                                <div className="footer_copy_content color_white text-center">
+                                    © {new Date().getFullYear()} Paypers Intermediacao de Negocios Ltda — CNPJ: 63.949.371/0001-34. O seu papel tem valor. Todos os direitos reservados.
                                 </div>
                             </div>
                         </div>
