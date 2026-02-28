@@ -1,9 +1,8 @@
 
+import Link from "next/link"
 import { Swiper, SwiperSlide } from "swiper/react"
 
-import Link from "next/link"
 import { Autoplay, Navigation, Pagination } from "swiper"
-import VideoBox from "../elements/VideoBox"
 export default function HeroSlider3() {
     const swiperOptions = {
         // General
@@ -12,8 +11,9 @@ export default function HeroSlider3() {
         slidesPerView: 1,
         spaceBetween: 0,
         autoplay: {
-            delay: 2500,
+            delay: 5000,
             disableOnInteraction: false,
+            pauseOnMouseEnter: true,
         },
         loop: true,
 
@@ -45,22 +45,15 @@ export default function HeroSlider3() {
                                     <div className="col-md-12 col-lg-7 col-sm-12 col-xs-12">
                                         <div className="slider_content">
                                             <h1 className="animated _fadeInDownBig">
-                                                Hands On Professional Touch
+                                                Venda e Cessão de Precatórios
                                             </h1>
                                             <p className="animated _flipInY">
-                                                On the other hand, we denounce with righteous indignation and dislike
-                                                men who are so beguiled.
+                                                Antecipe o valor dos seus precatórios com segurança e
+                                                as melhores condições do mercado.
                                             </p>
-                                            <ul>
-                                                <li>
-                                                    <Link href="#" className="theme-btn three  animated _zoomIn">Read More</Link >
-                                                </li>
-                                                <li>
-                                                    <div className="video_box animated _flipInX">
-                                                        <VideoBox />
-                                                    </div>
-                                                </li>
-                                            </ul>
+                                            <div className="theme_btn_all color_one">
+                                                <Link href="/precatorios" className="theme-btn one">Saiba mais</Link>
+                                            </div>
                                         </div>
                                     </div>
                                     <div className="col-md-12 col-lg-5 col-sm-12 col-xs-12 image_column">
@@ -81,22 +74,15 @@ export default function HeroSlider3() {
                                     <div className="col-md-12 col-lg-7 col-sm-12 col-xs-12">
                                         <div className="slider_content">
                                             <h1 className="animated _fadeInDownBig">
-                                                In House Specialists On Demand
+                                                Regularização Tributária
                                             </h1>
                                             <p className="animated _flipInY">
-                                                Duty obligations of business it will frequently occur that pleasures
-                                                have to be repudiated and annoyances accepted.
+                                                Reduza seus débitos fiscais com soluções estratégicas
+                                                de negociação junto à Fazenda Pública.
                                             </p>
-                                            <ul>
-                                                <li>
-                                                    <Link href="#" className="theme-btn three  animated _zoomIn">Read More</Link >
-                                                </li>
-                                                <li>
-                                                    <div className="video_box animated _flipInX">
-                                                        <VideoBox />
-                                                    </div>
-                                                </li>
-                                            </ul>
+                                            <div className="theme_btn_all color_one">
+                                                <Link href="/tributaria" className="theme-btn one">Saiba mais</Link>
+                                            </div>
                                         </div>
                                     </div>
                                     <div className="col-md-12 col-lg-5 col-sm-12 col-xs-12 image_column">
@@ -117,28 +103,20 @@ export default function HeroSlider3() {
                                     <div className="col-md-12 col-lg-7 col-sm-12 col-xs-12">
                                         <div className="slider_content">
                                             <h1 className="animated _fadeInDownBig">
-                                                Be spoke Outsourced HR Solutions
+                                                Investidores Parceiros
                                             </h1>
                                             <p className="animated _flipInY">
-                                                These cases are perfectly simple and easy to distinguish. In a free
-                                                hour, when our power of choice is untrammelled.
+                                                Invista em ativos judiciais com rentabilidade acima
+                                                da média e respaldo jurídico completo.
                                             </p>
-                                            <ul>
-                                                <li>
-                                                    <Link href="#" className="theme-btn three animated _zoomIn">
-                                                        Read More</Link >
-                                                </li>
-                                                <li>
-                                                    <div className="video_box animated _flipInX">
-                                                        <VideoBox />
-                                                    </div>
-                                                </li>
-                                            </ul>
+                                            <div className="theme_btn_all color_one">
+                                                <Link href="/investimentos" className="theme-btn one">Saiba mais</Link>
+                                            </div>
                                         </div>
                                     </div>
                                     <div className="col-md-12 col-lg-5 col-sm-12 col-xs-12 image_column">
                                         <div className="slider_image _flipInX" style={{ margin: '50px 0px 0px 50px' }}>
-                                            <img src="/assets/images/sliders/slider-3-1.jpg" className="img-fluid" alt="slider image" />
+                                            <img src="/assets/images/boneco3dbg.jpg" className="img-fluid" alt="slider image" />
                                         </div>
                                     </div>
                                 </div>

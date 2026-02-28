@@ -74,7 +74,6 @@ export default function Layout({ headerStyle, footerStyle, breadcrumbTitle, chil
             <div id="page" className={`page_wapper hfeed site ${scroll ? "fixed-header floating-menu" : ""} ${isMobileMenu ? "crt_mobile_menu-visible" : ""} ${isCart ? "side_bar_cart-visible" : ""}`}>
                 {/* <StyleSwitcher /> */}
                 <div id="wrapper_full" className="content_all_warpper">
-                    <MiniCart handleCart={handleCart} />
 
                     {!headerStyle && <Header1 handleSearch={handleSearch} handleContactPopup={handleContactPopup} handleMobileMenu={handleMobileMenu} />}
                     {headerStyle == 1 ? <Header1 handleSearch={handleSearch} handleContactPopup={handleContactPopup} handleMobileMenu={handleMobileMenu} /> : null}

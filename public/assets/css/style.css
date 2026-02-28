@@ -513,3 +513,14 @@ input[type="password"]{
   padding: 0px;
 }
 
+/* Paypers: page header content aligned to bottom */
+.page_header_default {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  padding: 100px 0px 0px;
+}
+.page_header_default .page_header_content {
+  margin-top: auto;
+}
+

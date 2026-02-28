@@ -2,7 +2,8 @@ export default function Preloader() {
     return (
         <>
             <div className="preloader-wrap">
-                <div className="preloader" style={{ backgroundImage: 'url(/assets/images/preloader.gif)' }}>
+                <div className="preloader">
+                    <img src="/assets/images/app-icon.png" alt="Paypers" className="preloader-logo" />
                 </div>
                 <div className="overlay" />
             </div>
