@@ -1,0 +1,85 @@
+
+### Rotas:
+- `/` = site
+- `/system-design` = documentação do design system
+
+---
+
+## 9) Página /system-design (REQUISITOS)
+
+A página `/system-design` deve renderizar e documentar:
+
+- Paleta de cores (swatches + nomes + HEX)
+- Tipografia (escala + exemplos)
+- Spacing (escala + exemplos)
+- Radius + Shadows + Blur (exemplos)
+- Componentes com variantes (Button, Card, Badge, Input, etc.)
+- Motion guidelines (resumo + links para exemplos)
+- Do/Don’t (pelo menos 5 regras práticas)
+- Checklist de consistência (tokens e uso real)
+
+---
+
+## 10) Uso de PDFs para Copy (OBRIGATÓRIO)
+
+Você deve ler `./docs/**/*.pdf` (inclui o Paypers - Referências.pdf) e extrair:
+- headlines
+- subtítulos
+- proposta de valor
+- bullets
+- CTAs
+
+Entregável:
+- `./_deliverables/COPY_MAP.md` mapeando **texto → seção**
+- `./_deliverables/COPY_TONE.md` definindo tom/voz (regras)
+
+Regras:
+- Não colar blocos enormes sem adaptação.
+- Se algo estiver faltando, criar placeholder **marcado como TODO**.
+
+---
+
+## 11) Checklist de Aceitação (OBRIGATÓRIO)
+
+Criar `./_deliverables/CHECKLIST.md` e marcar ✅ quando cumprir:
+
+- [ ] Repositório bnktec/paypers-site usado como base
+- [ ] `npm install` funciona
+- [ ] `npm run build` funciona
+- [ ] `/` renderiza o site
+- [ ] `/system-design` renderiza o design system
+- [ ] Tokens existem e são usados (sem hardcode)
+- [ ] Componentes base implementados e documentados
+- [ ] Motion spec completo e com exemplos
+- [ ] `prefers-reduced-motion` respeitado
+- [ ] PDF “Paypers - Referências.pdf” aplicado nos blocos do site
+- [ ] Amplify pronto e documentado (`_deliverables/AMPLIFY.md`)
+- [ ] `README.md` atualizado com instruções
+
+---
+
+## 12) Saída Final (OBRIGATÓRIO)
+
+Ao finalizar:
+- Garantir que rode com:
+  - `npm i`
+  - `npm run dev`
+  - `npm run build`
+- Atualizar `README.md` com:
+  - como rodar
+  - onde alterar tokens
+  - como ajustar componentes
+  - como ajustar motion/3D
+  - como fazer deploy no Amplify
+
+---
+
+## 13) Comece Agora
+
+1) Inspecione o repo `bnktec/paypers-site` (estrutura atual, dependências, App Router vs Pages Router).
+2) Importe/coloque tokens e estrutura do design system conforme definido.
+3) Estilize os blocos do site seguindo **Paypers - Referências.pdf**.
+4) Implemente `/system-design` completo.
+5) Documente tudo em `./_deliverables/`.
+
+Entregue o trabalho com código + documentação.
