@@ -28,11 +28,11 @@ export default function About2() {
                             <div className="pd_left_20">
                                 <div className="title_all_box style_two  dark_color">
                                     <div className="title_sections two">
-                                        <div className="before_title">Make sense for your business</div>
-                                        <h2>The Growing Trend of Outsourcing HR Services</h2>
+                                        <div className="before_title">Por que escolher nossa estrutura?</div>
+                                        <h2>Transformamos Precatórios e Créditos Tributários em Liquidez Estratégica</h2>
                                         <div className="description_box">
-                                            <p>Countsy provides Finance, Accounting and HR Solutions to venture backed startups.
-                                                Through a unique combination</p>
+                                            <p>Estruturação jurídica, segurança operacional e soluções sob medida para
+                                                empresas e investidores que querem antecipar resultados com segurança.</p>
                                         </div>
                                     </div>
                                     {/*===============spacing==============*/}
@@ -42,31 +42,20 @@ export default function About2() {
                                 <div className="extra_content authour_box_two dark_color">
                                     <div className="authour_box_content two">
                                         <div className="image">
-                                            <img src="/assets/images/authour-image.png" className="img-fluid authour_image" alt="authour Image" />
+                                            <img src="/assets/images/app-icon.png" className="img-fluid authour_image" alt="authour Image" />
                                         </div>
                                         <div className="text">
-                                            <h6>Liam Oliver, <span>Founder &amp; CEO of Qetus</span></h6>
-                                            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit Ut elit tellus, luctus
-                                                nec
-                                                ullamcorper mattis </p>
-                                            <img src="/assets/images/signature.png" className="img-fluid sign_image_two" alt="authour Image" />
+                                            <h6>Diego Cavalcante, <span>Fundador e CEO da Paypers</span></h6>
+                                            <p>Atuamos na estruturação, intermediação e aquisição de precatórios, além da
+                                                construção de estratégias em transação tributária.</p>
                                         </div>
                                     </div>
                                 </div>
                                 {/*===============spacing==============*/}
                                 <div className="mr_bottom_30" />
                                 {/*===============spacing==============*/}
-                                <div className="description_box">
-                                    <p>We also have a number of staff who are recipients and who are currently working
-                                        advanced
-                                        HR degrees. We are very proud of our long and successful history of organizations
-                                        industries .</p>
-                                </div>
-                                {/*===============spacing==============*/}
-                                <div className="mr_bottom_30" />
-                                {/*===============spacing==============*/}
                                 <div className="theme_btn_all color_one">
-                                    <Link href="#" className="theme-btn three">Contact us</Link>
+                                    <Link href="https://wa.me/550000000000" target="_blank" rel="noopener noreferrer" className="theme-btn three">Fale com um Especialista</Link>
                                 </div>
                                 {/*===============spacing==============*/}
                                 <div className="mr_bottom_20" />
@@ -83,10 +72,9 @@ export default function About2() {
                                     </div>
                                     <div className="txt_content">
                                         <h3>
-                                            <Link href="#" >Claims of duty</Link>
+                                            <Link href="#" >Análise Técnica</Link>
                                         </h3>
-                                        <p>Certain circumstances seds owing to the claims duty our righteous indignation and so
-                                            beguiled.</p>
+                                        <p>Recebemos a documentação e realizamos avaliação jurídica e financeira.</p>
                                     </div>
                                 </div>
                             </div>
@@ -101,9 +89,8 @@ export default function About2() {
                                         <span className="icon-bow-and-arrow" />
                                     </div>
                                     <div className="txt_content">
-                                        <h3><Link href="#" >Accepted always</Link></h3>
-                                        <p>To take a trivial example, which of us ever undertakes get laborious physical
-                                            exercise.</p>
+                                        <h3><Link href="#" >Formalização e Execução</Link></h3>
+                                        <p>Modelamos a operação conforme perfil e necessidade.</p>
                                     </div>
                                 </div>
                             </div>

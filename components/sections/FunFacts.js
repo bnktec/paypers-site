@@ -16,8 +16,8 @@ export default function FunFacts() {
                         <div className="col-lg-12">
                             <div className="title_all_box style_two text-center dark_color">
                                 <div className="title_sections two">
-                                    <div className="before_title">Some Fun Facts</div>
-                                    <h2> Structured Our Workflow</h2>
+                                    <div className="before_title">Resultado e Eficiência</div>
+                                    <h2>Estrutura, Técnica e Compromisso com Segurança Jurídica</h2>
                                 </div>
                                 {/*===============spacing==============*/}
                                 <div className="mr_bottom_20" />
@@ -43,8 +43,8 @@ export default function FunFacts() {
                                                 </div>
                                             </div>
                                             <div className="content_box">
-                                                <h6>Cases Done</h6>
-                                                <p>It is a long establish fact that a reader distracted</p>
+                                                <h6>Negociações</h6>
+                                                <p>Venda seu Precatório com Segurança e Agilidade</p>
                                             </div>
                                         </div>
                                     </div>
@@ -62,8 +62,8 @@ export default function FunFacts() {
                                                 </div>
                                             </div>
                                             <div className="content_box">
-                                                <h6>Satisfied clients</h6>
-                                                <p>It is a long establish fact that a reader distracted</p>
+                                                <h6>Clientes Satisfeitos</h6>
+                                                <p>Todas as operações seguem critérios técnicos rigorosos</p>
                                             </div>
                                         </div>
                                     </div>
@@ -81,8 +81,8 @@ export default function FunFacts() {
                                                 </div>
                                             </div>
                                             <div className="content_box">
-                                                <h6>Awards Wins</h6>
-                                                <p>It is a long establish fact that a reader distracted</p>
+                                                <h6>Segurança</h6>
+                                                <p>Atuação técnica fundamentada na legislação vigente e análise individualizada de cada caso.</p>
                                             </div>
                                         </div>
                                     </div>
@@ -100,8 +100,8 @@ export default function FunFacts() {
                                                 </div>
                                             </div>
                                             <div className="content_box">
-                                                <h6> Team Members</h6>
-                                                <p>It is a long establish fact that a reader distracted</p>
+                                                <h6>Investidores</h6>
+                                                <p>Negociação estruturada dentro dos programas de transação tributária com análise técnica personalizada.</p>
                                             </div>
                                         </div>
                                     </div>

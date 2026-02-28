@@ -11,11 +11,9 @@ export default function Service4() {
                         <div className="col-lg-12">
                             <div className="title_all_box style_two text-center dark_color">
                                 <div className="title_sections two">
-                                    <div className="before_title"> Effective Solutions</div>
-                                    <h2>Key Areas of Expertise</h2>
-                                    <p>Our power of choice is untrammelled and when nothing prevents <br /> being able to do
-                                        what
-                                        we like best every pleasure.</p>
+                                    <div className="before_title"> Soluções Estruturadas</div>
+                                    <h2>Soluções Estruturadas para Alta Performance Financeira</h2>
+                                    <p>Atuamos na estruturação, intermediação e aquisição de precatórios, além da construção de estratégias em transação tributária. Nosso foco é unir inteligência jurídica e eficiência financeira para gerar liquidez, redução de passivos e oportunidades de investimento seguras.</p>
                                 </div>
                             </div>
                         </div>
@@ -34,9 +32,9 @@ export default function Service4() {
                                     <div className="icon_box">
                                         <span className="icon icon-thumbs-up icon" />
                                     </div>
-                                    <h2 className="title_service"><Link href="#" >Employee Relations</Link ></h2>
-                                    <p className="short_desc">Indignation sed dislike men who are beguiled and demoralized.</p>
-                                    <Link className="read_more" href="#"> Read More<i className="icon-right-arrow-long" /></Link >
+                                    <h2 className="title_service"><Link href="/precatorios">Venda de Precatórios</Link></h2>
+                                    <p className="short_desc">Antecipe valores judiciais com segurança e previsibilidade</p>
+                                    <Link className="read_more" href="/precatorios"> Saiba mais<i className="icon-right-arrow-long" /></Link>
                                 </div>
                             </div>
                         </div>
@@ -50,9 +48,9 @@ export default function Service4() {
                                     <div className="icon_box">
                                         <span className="icon icon-thumbs-up icon" />
                                     </div>
-                                    <h2 className="title_service"><Link href="#" >Compliance Audits</Link ></h2>
-                                    <p className="short_desc">Prevents our being able too what get like best every pleasure.</p>
-                                    <Link className="read_more" href="#"> Read More<i className="icon-right-arrow-long" /></Link >
+                                    <h2 className="title_service"><Link href="/tributaria">Transação Tributária</Link></h2>
+                                    <p className="short_desc">Negocie débitos fiscais com estratégia e redução real</p>
+                                    <Link className="read_more" href="/tributaria"> Saiba mais<i className="icon-right-arrow-long" /></Link>
                                 </div>
                             </div>
                         </div>
@@ -66,10 +64,9 @@ export default function Service4() {
                                     <div className="icon_box">
                                         <span className="icon icon-thumbs-up icon" />
                                     </div>
-                                    <h2 className="title_service"><Link href="#" >Health Care Benefits</Link ></h2>
-                                    <p className="short_desc">Workplace conflict can become a costly and time-consuming process.
-                                    </p>
-                                    <Link className="read_more" href="#"> Read More<i className="icon-right-arrow-long" /></Link >
+                                    <h2 className="title_service"><Link href="/investimentos">Plataforma para Investidores</Link></h2>
+                                    <p className="short_desc">Acesso estruturado a operações com lastro jurídico</p>
+                                    <Link className="read_more" href="/investimentos"> Saiba mais<i className="icon-right-arrow-long" /></Link>
                                 </div>
                             </div>
                         </div>

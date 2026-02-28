@@ -1,5 +1,4 @@
 import Link from "next/link"
-import VideoBox from "../elements/VideoBox"
 export default function Cta() {
     return (
         <>
@@ -13,25 +12,19 @@ export default function Cta() {
                             <div className="col-lg-12">
                                 <div className="left_content">
                                     <div className="main_content">
-                                        <div className="video_box">
-                                            <VideoBox />
-                                        </div>
-                                        <h6>Need Some Help?</h6>
-                                        <h1>Payroll Management</h1>
-                                        <p>Our power of choice is untrammelled and when nothing prevents our able to do what we
-                                            like best every pleasure is to be welcomed and occur that pleasures have to be
-                                            repudiated.</p>
+                                        <h1>Experiência, Estrutura e Confiança</h1>
+                                        <p>Operações conduzidas com rigor técnico, compliance e foco em previsibilidade jurídica. Atuamos com parceiros especializados e processos estruturados para garantir segurança em todas as etapas.</p>
                                         <div className="bottom_content">
                                             <div className="button_content">
-                                                <Link href="#" className="theme-btn three">
-                                                    Contact us<i className="icon-right-arrow-long" />
+                                                <Link href="https://wa.me/550000000000" target="_blank" rel="noopener noreferrer" className="theme-btn three">
+                                                    Fale com um Especialista<i className="icon-right-arrow-long" />
                                                 </Link >
                                             </div>
                                             <div className="call_content">
                                                 <span className="icon-phone-call1 icon" />
                                                 <div className="content_bx">
-                                                    <h2>Contact Us Soon</h2>
-                                                    <p>creote@support.com &amp; 16599349993</p>
+                                                    <h2>Conheça a Solução</h2>
+                                                    <p>contato@paypers.com.br &amp; +55 (00) 00000-0000</p>
                                                 </div>
                                             </div>
                                         </div>

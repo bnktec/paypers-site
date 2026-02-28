@@ -11,8 +11,8 @@ export default function Process3() {
                         <div className="col-lg-12">
                             <div className="title_all_box style_one text-center dark_color">
                                 <div className="title_sections">
-                                    <div className="before_title">The Steps of</div>
-                                    <h2>Recruitment Process</h2>
+                                    <div className="before_title">Como trabalhamos</div>
+                                    <h2>Processo Simples e Estruturado</h2>
                                 </div>
                                 {/*===============spacing==============*/}
                                 <div className="mr_bottom_25" />
@@ -29,9 +29,8 @@ export default function Process3() {
                                         <h6> 01</h6>
                                     </div>
                                     <div className="content_box">
-                                        <h2><Link href="#" >Identifiying the Needs</Link >
-                                        </h2>
-                                        <p>Holds in these matters principles all selection right rejects.</p>
+                                        <h2><Link href="#" onClick={(e) => e.preventDefault()} style={{ cursor: 'default' }}>Análise Técnica</Link></h2>
+                                        <p>Recebemos a documentação e realizamos avaliação jurídica e financeira.</p>
                                     </div>
                                 </div>
                             </div>
@@ -47,9 +46,8 @@ export default function Process3() {
                                         <h6>02</h6>
                                     </div>
                                     <div className="content_box">
-                                        <h2><Link href="#" >Preparing Job
-                                            Description</Link ></h2>
-                                        <p>Our unique approach locates skill based industry professionals</p>
+                                        <h2><Link href="#" onClick={(e) => e.preventDefault()} style={{ cursor: 'default' }}>Estruturação da Proposta</Link></h2>
+                                        <p>Modelamos a operação conforme perfil e necessidade.</p>
                                     </div>
                                 </div>
                             </div>
@@ -62,9 +60,8 @@ export default function Process3() {
                                         <h6> 03</h6>
                                     </div>
                                     <div className="content_box">
-                                        <h2><Link href="#" >Find Talented Candidate</Link >
-                                        </h2>
-                                        <p>Fault with man who choose enjoy a annoying consequences.</p>
+                                        <h2><Link href="#" onClick={(e) => e.preventDefault()} style={{ cursor: 'default' }}>Formalização e Execução</Link></h2>
+                                        <p>Contrato, cessão ou negociação estruturada.</p>
                                     </div>
                                 </div>
                             </div>
@@ -80,9 +77,8 @@ export default function Process3() {
                                         <h6> 04</h6>
                                     </div>
                                     <div className="content_box">
-                                        <h2><Link href="#" >Screening &amp;
-                                            Shortlisting</Link ></h2>
-                                        <p>Professional checks as well as a local records reference check</p>
+                                        <h2><Link href="#" onClick={(e) => e.preventDefault()} style={{ cursor: 'default' }}>Acompanhamento</Link></h2>
+                                        <p>Monitoramento e suporte até a conclusão.</p>
                                     </div>
                                 </div>
                             </div>
