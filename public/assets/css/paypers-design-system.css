@@ -1,0 +1,92 @@
+/* =============================================
+   Paypers Design System — Tipografia & Overrides
+   ============================================= */
+
+/* Tipografia base */
+html, body {
+  font-family: "Montserrat", system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif;
+  color: var(--neutral-950, #0A0A0A);
+}
+
+/* Escala tipografica — Headings */
+h1 {
+  font-weight: 600;
+  font-size: 48px;
+  line-height: 1.3;
+  letter-spacing: -0.016em;
+}
+
+h2 {
+  font-weight: 600;
+  font-size: 48px;
+  line-height: 1.3;
+  letter-spacing: -0.016em;
+}
+
+h3 {
+  font-weight: 600;
+  font-size: 24px;
+  line-height: 1.3;
+  letter-spacing: -0.008em;
+}
+
+h4 {
+  font-weight: 600;
+  font-size: 24px;
+  line-height: 1.3;
+  letter-spacing: -0.008em;
+}
+
+h5 {
+  font-weight: 600;
+  font-size: 18px;
+  line-height: 1.5;
+  letter-spacing: 0;
+}
+
+h6 {
+  font-weight: 600;
+  font-size: 18px;
+  line-height: 1.5;
+  letter-spacing: 0;
+}
+
+p {
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 1.5;
+  letter-spacing: 0;
+}
+
+small {
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 1.3;
+  letter-spacing: 0;
+}
+
+/* Logo — branco no header default, original no sticky */
+.header_logo_box .logo_default {
+  filter: brightness(0) invert(1);
+}
+
+/* Classes utilitarias de tipografia */
+.h1-screen-title   { font-weight: 600; font-size: 48px; line-height: 1.3; letter-spacing: -0.016em; }
+.h3-section-title   { font-weight: 600; font-size: 24px; line-height: 1.3; letter-spacing: -0.008em; }
+.h5-section-inner   { font-weight: 600; font-size: 18px; line-height: 1.5; letter-spacing: 0; }
+.p-body             { font-weight: 400; font-size: 16px; line-height: 1.5; letter-spacing: 0; }
+.small-regular      { font-weight: 400; font-size: 14px; line-height: 1.3; letter-spacing: 0; }
+.small-medium       { font-weight: 500; font-size: 14px; line-height: 1.3; letter-spacing: 0; }
+.span-xs            { font-weight: 400; font-size: 12px; line-height: 1.0; letter-spacing: 0; }
+
+/* Botoes — tom mais escuro do brand green */
+.theme-btn.one,
+.theme-btn.three {
+  background-color: #6A8C16 !important;
+  border-color: #6A8C16 !important;
+}
+.theme-btn.one:hover,
+.theme-btn.three:hover {
+  background-color: #4A6210 !important;
+  border-color: #4A6210 !important;
+}
