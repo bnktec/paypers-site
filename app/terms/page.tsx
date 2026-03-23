@@ -13,8 +13,8 @@ export default function Terms() {
       <section className="relative overflow-hidden bg-secondary">
         <div className="relative z-50"><Header variant="transparent" /></div>
         <div className="container mx-auto px-4 lg:px-8 relative z-10 py-16 md:py-20">
-          <div className="max-w-[650px]">
-            <h1 className="text-white text-[36px] md:text-[52px] font-semibold leading-[1.1] tracking-tight">
+          <div>
+            <h1 className="text-white text-[36px] md:text-[52px] font-semibold leading-[1.1] tracking-tight whitespace-nowrap">
               Termos e Condições <span className="text-primary">de Uso</span>
             </h1>
           </div>
