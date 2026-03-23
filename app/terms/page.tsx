@@ -9,14 +9,20 @@ export const metadata: Metadata = {
 export default function Terms() {
   return (
     <div className="min-h-screen bg-background text-foreground">
-      <Header />
-      <section className="py-24">
-        <div className="container mx-auto px-4 lg:px-8 max-w-3xl">
-          <div className="w-8 h-1 bg-primary mb-6" />
-          <h1 className="text-[36px] md:text-[48px] text-secondary font-semibold leading-[1.1] tracking-tight mb-12">
-            Termos e Condições de Uso
-          </h1>
+      {/* HERO */}
+      <section className="relative overflow-hidden bg-secondary">
+        <div className="relative z-50"><Header variant="transparent" /></div>
+        <div className="container mx-auto px-4 lg:px-8 relative z-10 py-16 md:py-20">
+          <div className="max-w-[650px]">
+            <h1 className="text-white text-[36px] md:text-[52px] font-semibold leading-[1.1] tracking-tight">
+              Termos e Condições <span className="text-primary">de Uso</span>
+            </h1>
+          </div>
+        </div>
+      </section>
 
+      <section className="py-24 bg-subtle-grid">
+        <div className="container mx-auto px-4 lg:px-8 max-w-3xl">
           <div className="prose prose-lg max-w-none text-muted-foreground space-y-8">
             <p className="text-[14px] text-muted-foreground/60">Última atualização: 23 de março de 2026</p>
 
