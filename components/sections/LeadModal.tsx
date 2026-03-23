@@ -3,8 +3,6 @@
 import { useState } from "react";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
-import { useToast } from "@/hooks/use-toast";
-import { useMutation } from "@tanstack/react-query";
 import { X, CheckCircle2 } from "lucide-react";
 
 interface LeadModalProps {
@@ -15,33 +13,17 @@ interface LeadModalProps {
 }
 
 export default function LeadModal({ open, onClose, type, title }: LeadModalProps) {
-  const { toast } = useToast();
   const [submitted, setSubmitted] = useState(false);
-
-  const mutation = useMutation({
-    mutationFn: async (data: Record<string, string>) => {
-      const res = await fetch("/api/leads", {
-        method: "POST",
-        headers: { "Content-Type": "application/json" },
-        body: JSON.stringify({ ...data, type }),
-      });
-      if (!res.ok) throw new Error("Erro ao enviar");
-      return res.json();
-    },
-    onSuccess: () => {
-      setSubmitted(true);
-      toast({ title: "Solicitação enviada!", description: "Um especialista entrará em contato." });
-    },
-    onError: () => {
-      toast({ title: "Erro", description: "Tente novamente.", variant: "destructive" });
-    },
-  });
+  const [sending, setSending] = useState(false);
 
   const handleSubmit = (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
-    const formData = new FormData(e.currentTarget);
-    const data = Object.fromEntries(formData.entries()) as Record<string, string>;
-    mutation.mutate(data);
+    // TODO: integrar com API externa
+    setSending(true);
+    setTimeout(() => {
+      setSubmitted(true);
+      setSending(false);
+    }, 500);
   };
 
   if (!open) return null;
@@ -63,7 +45,7 @@ export default function LeadModal({ open, onClose, type, title }: LeadModalProps
               <CheckCircle2 className="w-8 h-8 text-primary" />
             </div>
             <h3 className="text-[24px] font-semibold mb-3">Recebemos!</h3>
-            <p className="text-muted-foreground">Um especialista entrará em contato em breve.</p>
+            <p className="text-muted-foreground">Um especialista entrara em contato em breve.</p>
             <Button onClick={onClose} className="mt-8 bg-primary text-primary-foreground rounded-lg px-8 h-[48px]">
               Fechar
             </Button>
@@ -82,13 +64,14 @@ export default function LeadModal({ open, onClose, type, title }: LeadModalProps
               <div>
                 <Input name="phone" placeholder="Telefone (opcional)" className="h-[48px] rounded-lg" data-testid="input-lead-phone" />
               </div>
+              <input type="hidden" name="type" value={type} />
               <Button
                 type="submit"
-                disabled={mutation.isPending}
+                disabled={sending}
                 className="w-full bg-primary text-primary-foreground hover:bg-primary/90 font-semibold rounded-lg h-[56px] text-[16px]"
                 data-testid="button-submit-lead"
               >
-                {mutation.isPending ? "Enviando..." : "Solicitar Proposta"}
+                {sending ? "Enviando..." : "Solicitar Proposta"}
               </Button>
             </form>
           </>

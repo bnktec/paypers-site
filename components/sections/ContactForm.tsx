@@ -4,38 +4,20 @@ import { useState } from "react";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { Textarea } from "@/components/ui/textarea";
-import { useToast } from "@/hooks/use-toast";
-import { useMutation } from "@tanstack/react-query";
 import { Send, MessageCircle, CheckCircle2 } from "lucide-react";
 
 export default function ContactForm() {
-  const { toast } = useToast();
   const [submitted, setSubmitted] = useState(false);
-
-  const mutation = useMutation({
-    mutationFn: async (data: Record<string, string>) => {
-      const res = await fetch("/api/contacts", {
-        method: "POST",
-        headers: { "Content-Type": "application/json" },
-        body: JSON.stringify(data),
-      });
-      if (!res.ok) throw new Error("Erro ao enviar mensagem");
-      return res.json();
-    },
-    onSuccess: () => {
-      setSubmitted(true);
-      toast({ title: "Mensagem enviada!", description: "Nosso time entrará em contato em breve." });
-    },
-    onError: () => {
-      toast({ title: "Erro", description: "Não foi possível enviar. Tente novamente.", variant: "destructive" });
-    },
-  });
+  const [sending, setSending] = useState(false);
 
   const handleSubmit = (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
-    const formData = new FormData(e.currentTarget);
-    const data = Object.fromEntries(formData.entries()) as Record<string, string>;
-    mutation.mutate(data);
+    // TODO: integrar com API externa
+    setSending(true);
+    setTimeout(() => {
+      setSubmitted(true);
+      setSending(false);
+    }, 500);
   };
 
   if (submitted) {
@@ -45,8 +27,8 @@ export default function ContactForm() {
           <div className="w-16 h-16 rounded-full bg-primary/10 mx-auto flex items-center justify-center mb-6">
             <CheckCircle2 className="w-8 h-8 text-primary" />
           </div>
-          <h2 className="text-[28px] font-semibold mb-4">Recebemos sua solicitação!</h2>
-          <p className="text-muted-foreground text-[16px]">Em breve nosso time entrará em contato com orientação personalizada.</p>
+          <h2 className="text-[28px] font-semibold mb-4">Recebemos sua solicitacao!</h2>
+          <p className="text-muted-foreground text-[16px]">Em breve nosso time entrara em contato com orientacao personalizada.</p>
         </div>
       </section>
     );
@@ -56,18 +38,18 @@ export default function ContactForm() {
     <section id="contato" className="py-24 bg-subtle-grid">
       <div className="container mx-auto px-4 lg:px-8">
         <div className="grid md:grid-cols-2 gap-16 max-w-5xl mx-auto">
-          
+
           <div>
             <div className="w-8 h-1 bg-primary mb-6" />
             <h2 className="text-[36px] text-secondary font-semibold leading-[1.2] tracking-tight mb-6">
               Fale com Nosso Time
             </h2>
             <p className="text-muted-foreground text-[16px] leading-[1.6] mb-10">
-              Envie sua mensagem ou fale diretamente pelo WhatsApp. Nosso time retornará com orientação personalizada.
+              Envie sua mensagem ou fale diretamente pelo WhatsApp. Nosso time retornara com orientacao personalizada.
             </p>
-            
+
             <a
-              href="https://wa.me/5500000000000"
+              href="https://wa.me/5561999160682"
               target="_blank"
               rel="noopener noreferrer"
               data-testid="link-whatsapp-contact"
@@ -132,7 +114,7 @@ export default function ContactForm() {
                 id="subject"
                 name="subject"
                 required
-                placeholder="Ex: Venda de Precatório"
+                placeholder="Ex: Venda de Precatorio"
                 className="h-[48px] rounded-lg border-neutral-light"
                 data-testid="input-subject"
               />
@@ -151,11 +133,11 @@ export default function ContactForm() {
             </div>
             <Button
               type="submit"
-              disabled={mutation.isPending}
+              disabled={sending}
               className="w-full bg-primary text-primary-foreground hover:bg-primary/90 font-semibold rounded-lg h-[56px] text-[16px]"
               data-testid="button-submit-contact"
             >
-              {mutation.isPending ? "Enviando..." : (
+              {sending ? "Enviando..." : (
                 <>
                   Enviar Mensagem <Send className="ml-2 w-4 h-4" />
                 </>
