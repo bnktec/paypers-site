@@ -55,7 +55,7 @@ export default function Header({ variant = "solid" }: HeaderProps) {
             <Link href="/sobre" className={`${textMuted} hover:text-primary transition-colors`} data-testid="nav-sobre">Sobre</Link>
             <Link href="/contato" className={`${textMuted} hover:text-primary transition-colors`} data-testid="nav-contato">Contato</Link>
           </nav>
-          <a href="https://wa.me/5561999160682?text=Estou%20entrando%20em%20contato%20pelo%20site%2C%20preciso%20de%20mais%20informa%C3%A7%C3%B5es." target="_blank" rel="noopener noreferrer">
+          <a href="https://wa.me/551152867978?text=Estou%20entrando%20em%20contato%20pelo%20site%2C%20preciso%20de%20mais%20informa%C3%A7%C3%B5es." target="_blank" rel="noopener noreferrer">
             <Button className="bg-primary text-primary-foreground hover:bg-primary/90 font-semibold rounded-lg px-6 h-11 text-[14px]" data-testid="button-baixar-app">
               Falar com um Especialista
             </Button>
@@ -74,7 +74,7 @@ export default function Header({ variant = "solid" }: HeaderProps) {
           <Link href="/investidores" className="block px-4 py-3 rounded-lg text-secondary hover:bg-neutral-lightest" onClick={() => setMobileOpen(false)}>Investidores</Link>
           <Link href="/sobre" className="block px-4 py-3 rounded-lg text-secondary hover:bg-neutral-lightest" onClick={() => setMobileOpen(false)}>Sobre</Link>
           <Link href="/contato" className="block px-4 py-3 rounded-lg text-secondary hover:bg-neutral-lightest" onClick={() => setMobileOpen(false)}>Contato</Link>
-          <a href="https://wa.me/5561999160682?text=Estou%20entrando%20em%20contato%20pelo%20site%2C%20preciso%20de%20mais%20informa%C3%A7%C3%B5es." target="_blank" rel="noopener noreferrer">
+          <a href="https://wa.me/551152867978?text=Estou%20entrando%20em%20contato%20pelo%20site%2C%20preciso%20de%20mais%20informa%C3%A7%C3%B5es." target="_blank" rel="noopener noreferrer">
             <Button className="w-full bg-primary text-primary-foreground rounded-lg h-11 mt-2">Falar com um Especialista</Button>
           </a>
         </div>

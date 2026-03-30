@@ -126,7 +126,7 @@ export default function Privacy() {
             <div>
               <h2 className="text-[20px] font-semibold text-secondary mb-4">10. Contato</h2>
               <p className="text-[16px] leading-[1.8]">
-                Para exercer seus direitos ou esclarecer dúvidas sobre o tratamento de dados pessoais, entre em contato pelo WhatsApp (61) 99916-0682 ou através da nossa página de contato.
+                Para exercer seus direitos ou esclarecer dúvidas sobre o tratamento de dados pessoais, entre em contato pelo WhatsApp (11) 5286-7978 ou através da nossa página de contato.
               </p>
             </div>
           </div>
